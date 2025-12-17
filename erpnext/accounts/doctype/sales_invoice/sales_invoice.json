@@ -19,6 +19,7 @@
   "posting_time",
   "set_posting_time",
   "due_date",
+  "payment_method",
   "column_break_14",
   "is_pos",
   "pos_profile",
@@ -215,6 +216,21 @@
   "is_internal_customer",
   "is_discounted",
   "remarks",
+  "zatca_tab",
+  "egsunit",
+  "invoice_counter",
+  "ksa_einv_qr",
+  "column_break_cwho",
+  "uuid",
+  "invoice_hash",
+  "section_break_kvqn",
+  "xml_invoice",
+  "column_break_uikj",
+  "invoice_qrcode",
+  "section_break_mpzk",
+  "error_message",
+  "column_break_aybt",
+  "warning_message",
   "connections_tab"
  ],
  "fields": [
@@ -2186,6 +2202,88 @@
    "fieldtype": "Data",
    "is_virtual": 1,
    "label": "Last Scanned Warehouse"
+  },
+  {
+   "fieldname": "zatca_tab",
+   "fieldtype": "Tab Break",
+   "label": "ZATCA"
+  },
+  {
+   "fieldname": "egsunit",
+   "fieldtype": "Link",
+   "label": "EGSUnit",
+   "options": "EGSUnit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_counter",
+   "fieldtype": "Int",
+   "label": "Invoice Counter"
+  },
+  {
+   "fieldname": "column_break_cwho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uuid",
+   "fieldtype": "Data",
+   "label": "UUID"
+  },
+  {
+   "fieldname": "invoice_hash",
+   "fieldtype": "Text",
+   "label": "Invoice Hash"
+  },
+  {
+   "fieldname": "section_break_kvqn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "xml_invoice",
+   "fieldtype": "Long Text",
+   "label": "XML Invoice"
+  },
+  {
+   "fieldname": "column_break_uikj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_qrcode",
+   "fieldtype": "Text",
+   "label": "Invoice QRCODE"
+  },
+  {
+   "fieldname": "section_break_mpzk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Long Text",
+   "label": "Error Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_aybt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warning_message",
+   "fieldtype": "Long Text",
+   "label": "Warning Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ksa_einv_qr",
+   "fieldtype": "Attach Image",
+   "label": "Invoice QR Code Image",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "\nCash\nBank Card\nCredit Card\nDebit Card\nBank Transfer",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
@@ -2199,7 +2297,7 @@
    "link_fieldname": "consolidated_invoice"
   }
  ],
- "modified": "2025-09-09 14:48:59.472826",
+ "modified": "2025-12-09 10:29:52.879245",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",

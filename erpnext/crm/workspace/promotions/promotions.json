@@ -1,0 +1,46 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"uVGRt0_rvT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Promotions</span>\",\"col\":12}},{\"id\":\"CfYENY_I-M\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Promotional Schemes\",\"col\":4}},{\"id\":\"WaRVTapM2i\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pricing Rules\",\"col\":3}}]",
+ "creation": "2025-12-03 15:45:19.164819",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "sort",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Promotions",
+ "links": [],
+ "modified": "2025-12-07 14:28:15.044020",
+ "modified_by": "Administrator",
+ "module": "CRM",
+ "name": "Promotions",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "CRM",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 30.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Promotional Schemes",
+   "link_to": "Promotional Scheme",
+   "stats_filter": "[[\"Promotional Scheme\",\"disable\",\"=\",0,false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Pricing Rules",
+   "link_to": "Pricing Rule",
+   "stats_filter": "[[\"Pricing Rule\",\"disable\",\"=\",0,false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Promotions"
+}

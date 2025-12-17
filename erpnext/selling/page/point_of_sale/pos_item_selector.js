@@ -119,18 +119,20 @@ erpnext.PointOfSale.ItemSelector = class {
 			}
 		}
 
+		let userLang = frappe.boot.lang || frappe.boot.user.language;
+
 		return `<div class="item-wrapper"
 				data-item-code="${escape(item.item_code)}" data-serial-no="${escape(serial_no)}"
 				data-batch-no="${escape(batch_no)}" data-uom="${escape(uom)}"
 				data-rate="${escape(price_list_rate || 0)}"
 				data-stock-uom="${escape(item.stock_uom)}"
-				title="${item.item_name}">
+				title="${item.item_name}" title-ar="${item.item_name_in_arabic}">
 
 				${get_item_image_html()}
 
 				<div class="item-detail">
 					<div class="item-name">
-						${frappe.ellipsis(item.item_name, 18)}
+						${frappe.ellipsis(userLang === "ar" ? item.item_name_in_arabic : item.item_name, 18)}
 					</div>
 					<div class="item-rate">${format_currency(price_list_rate, item.currency, precision) || 0} / ${uom}</div>
 				</div>
@@ -253,6 +255,8 @@ erpnext.PointOfSale.ItemSelector = class {
 		this.$component.on("click", ".item-wrapper", function () {
 			const $item = $(this);
 			const item_code = unescape($item.attr("data-item-code"));
+			const item_name = unescape($item.attr("title"));
+			const item_name_in_arabic = unescape($item.attr("title-ar"));
 			let batch_no = unescape($item.attr("data-batch-no"));
 			let serial_no = unescape($item.attr("data-serial-no"));
 			let uom = unescape($item.attr("data-uom"));
@@ -269,7 +273,7 @@ erpnext.PointOfSale.ItemSelector = class {
 			me.events.item_selected({
 				field: "qty",
 				value: "+1",
-				item: { item_code, batch_no, serial_no, uom, rate, stock_uom },
+				item: { item_code, item_name, item_name_in_arabic, batch_no, serial_no, uom, rate, stock_uom },
 			});
 			me.search_field.set_focus();
 		});

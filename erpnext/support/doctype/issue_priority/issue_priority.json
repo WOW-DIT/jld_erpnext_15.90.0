@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "Prompt",
  "creation": "2019-05-20 15:14:21.604447",
  "doctype": "DocType",
@@ -13,7 +14,8 @@
    "label": "Description"
   }
  ],
- "modified": "2019-05-20 17:06:38.095647",
+ "links": [],
+ "modified": "2025-12-11 14:49:15.094985",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "Issue Priority",
@@ -33,7 +35,10 @@
   }
  ],
  "quick_entry": 1,
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "ASC",
- "track_changes": 1
+ "states": [],
+ "track_changes": 1,
+ "translated_doctype": 1
 }

@@ -4,12 +4,12 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2020-06-01 15:41:06.348380",
+ "modified": "2025-12-04 14:51:09.031275",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "point-of-sale",
  "owner": "Administrator",
- "page_name": "Point of Sale",
+ "page_name": "point-of-sale",
  "restrict_to_domain": "Retail",
  "roles": [
   {
@@ -23,6 +23,9 @@
   },
   {
    "role": "Sales Manager"
+  },
+  {
+   "role": "Cashier"
   }
  ],
  "script": null,

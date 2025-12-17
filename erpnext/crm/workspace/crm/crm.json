@@ -5,7 +5,7 @@
    "label": "Territory Wise Sales"
   }
  ],
- "content": "[{\"id\":\"Cj2TyhgiWy\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Territory Wise Sales\",\"col\":12}},{\"id\":\"LAKRmpYMRA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XGIwEUStw_\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"cgoC712JCS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Calendar\",\"col\":3}},{\"id\":\"69RN0XsiJK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead\",\"col\":3}},{\"id\":\"t6PQ0vY-Iw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Opportunity\",\"col\":3}},{\"id\":\"VOFE0hqXRD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"0ik53fuemG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Analytics\",\"col\":3}},{\"id\":\"wdROEmB_XG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"-I9HhcgUKE\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ttpROKW9vk\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"-76QPdbBHy\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales Pipeline\",\"col\":4}},{\"id\":\"_YmGwzVWRr\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"Bma1PxoXk3\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"80viA0R83a\",\"type\":\"card\",\"data\":{\"card_name\":\"Campaign\",\"col\":4}},{\"id\":\"Buo5HtKRFN\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"sLS_x4FMK2\",\"type\":\"card\",\"data\":{\"card_name\":\"Maintenance\",\"col\":4}}]",
+ "content": "[{\"id\":\"Cj2TyhgiWy\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Territory Wise Sales\",\"col\":12}},{\"id\":\"LAKRmpYMRA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XGIwEUStw_\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"69RN0XsiJK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead\",\"col\":3}},{\"id\":\"t6PQ0vY-Iw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Opportunity\",\"col\":3}},{\"id\":\"VOFE0hqXRD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"0ik53fuemG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Analytics\",\"col\":3}},{\"id\":\"wdROEmB_XG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"-I9HhcgUKE\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ttpROKW9vk\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"-76QPdbBHy\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales Pipeline\",\"col\":4}},{\"id\":\"_YmGwzVWRr\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"Bma1PxoXk3\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"80viA0R83a\",\"type\":\"card\",\"data\":{\"card_name\":\"Campaign\",\"col\":4}},{\"id\":\"Buo5HtKRFN\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"sLS_x4FMK2\",\"type\":\"card\",\"data\":{\"card_name\":\"Maintenance\",\"col\":4}},{\"id\":\"wv6p08x5TQ\",\"type\":\"card\",\"data\":{\"card_name\":\"Appointment Reminder\",\"col\":4}}]",
  "creation": "2020-01-23 14:48:30.183272",
  "custom_blocks": [],
  "docstatus": 0,
@@ -17,111 +17,6 @@
  "is_hidden": 0,
  "label": "CRM",
  "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Reports",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "dependencies": "Lead",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Lead Details",
-   "link_count": 0,
-   "link_to": "Lead Details",
-   "link_type": "Report",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Sales Pipeline Analytics",
-   "link_count": 0,
-   "link_to": "Sales Pipeline Analytics",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Opportunity Summary by Sales Stage",
-   "link_count": 0,
-   "link_to": "Opportunity Summary by Sales Stage",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Sales Funnel",
-   "link_count": 0,
-   "link_to": "sales-funnel",
-   "link_type": "Page",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Lead",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Prospects Engaged But Not Converted",
-   "link_count": 0,
-   "link_to": "Prospects Engaged But Not Converted",
-   "link_type": "Report",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Opportunity",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "First Response Time for Opportunity",
-   "link_count": 0,
-   "link_to": "First Response Time for Opportunity",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Sales Order",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Inactive Customers",
-   "link_count": 0,
-   "link_to": "Inactive Customers",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Lead",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Campaign Efficiency",
-   "link_count": 0,
-   "link_to": "Campaign Efficiency",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Lead",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Lead Owner Efficiency",
-   "link_count": 0,
-   "link_to": "Lead Owner Efficiency",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
   {
    "hidden": 0,
    "is_query_report": 0,
@@ -428,9 +323,154 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Appointment Reminder",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reminder Schedules",
+   "link_count": 0,
+   "link_to": "Appointment Reminder Schedule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reminder Logs",
+   "link_count": 0,
+   "link_to": "Appointment Reminder Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 10,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "Lead",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Lead Details",
+   "link_count": 0,
+   "link_to": "Lead Details",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales Pipeline Analytics",
+   "link_count": 0,
+   "link_to": "Sales Pipeline Analytics",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Opportunity Summary by Sales Stage",
+   "link_count": 0,
+   "link_to": "Opportunity Summary by Sales Stage",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Funnel",
+   "link_count": 0,
+   "link_to": "sales-funnel",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Lead",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Prospects Engaged But Not Converted",
+   "link_count": 0,
+   "link_to": "Prospects Engaged But Not Converted",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Opportunity",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "First Response Time for Opportunity",
+   "link_count": 0,
+   "link_to": "First Response Time for Opportunity",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Sales Order",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Inactive Customers",
+   "link_count": 0,
+   "link_to": "Inactive Customers",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Lead",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Campaign Efficiency",
+   "link_count": 0,
+   "link_to": "Campaign Efficiency",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Lead",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Lead Owner Efficiency",
+   "link_count": 0,
+   "link_to": "Lead Owner Efficiency",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Today's Appointments",
+   "link_count": 0,
+   "link_to": "Today's Appointments",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-12-02 15:26:10.489021",
+ "modified": "2025-12-07 14:28:14.992628",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "CRM",
@@ -441,7 +481,7 @@
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 17.0,
+ "sequence_id": 29.0,
  "shortcuts": [
   {
    "color": "Blue",

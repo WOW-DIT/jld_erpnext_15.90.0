@@ -28,9 +28,31 @@ frappe.ui.form.on("Appointment", {
 		});
 	},
 	selected_date: function (frm) {
+		if(!frm.doc.department) {
+			frappe.throw(`${__("Required Field:")} ${__("Category")}`)
+		}
+		if(!frm.doc.employee) {
+			frappe.throw(`${__("Required Field:")} ${__("Employee")}`)
+		}
 		if(frm.doc.selected_date) {
 			set_available_times(frm);
 		}
+	},
+	department: function (frm) {
+		frm.fields_dict["times"].wrapper.innerHTML = "";
+		if(frm.doc.department) {
+			frm.set_value("service", "");
+			frm.set_query("service", function () {
+				return {
+					filters: {
+						item_group: frm.doc.department
+					},
+				};
+			});
+		}
+	},
+	employee: function (frm) {
+		frm.fields_dict["times"].wrapper.innerHTML = "";
 	}
 });
 
@@ -73,6 +95,11 @@ function set_end_date(frm, start_date, duration) {
 
 function build_buttons_html(frm, times, duration) {
 	// Define how many buttons per row (e.g., 3 buttons per row)
+	if (times.length == 0) {
+		const message = "لا يوجد مواعيد متاحة"
+		frm.fields_dict["times"].wrapper.innerHTML = `<strong style="color: red;">${message}</strong>`;
+		return
+	}
 	const buttons_per_row = 5;
 	
 	let html_content = '<div class="container-fluid">';

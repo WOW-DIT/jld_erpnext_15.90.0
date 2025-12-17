@@ -17,14 +17,17 @@
   "consolidated_invoice",
   "is_pos",
   "is_return",
+  "is_debit_note",
   "update_billed_amount_in_sales_order",
   "update_billed_amount_in_delivery_note",
   "column_break1",
   "company",
+  "company_name_in_arabic",
   "posting_date",
   "posting_time",
   "set_posting_time",
   "due_date",
+  "payment_method",
   "amended_from",
   "return_against",
   "accounting_dimensions_section",
@@ -185,7 +188,23 @@
   "column_break_140",
   "auto_repeat",
   "update_auto_repeat_reference",
-  "against_income_account"
+  "against_income_account",
+  "vat_id",
+  "zatca_tab",
+  "egsunit",
+  "invoice_counter",
+  "ksa_einv_qr",
+  "column_break_khnn",
+  "uuid",
+  "invoice_hash",
+  "section_break_kpyu",
+  "xml_invoice",
+  "column_break_iovp",
+  "invoice_qrcode",
+  "section_break_gehy",
+  "error_message",
+  "column_break_bfmg",
+  "warning_message"
  ],
  "fields": [
   {
@@ -1592,12 +1611,111 @@
    "fieldname": "use_deposit",
    "fieldtype": "Check",
    "label": "Use Deposit"
+  },
+  {
+   "fetch_from": "company.company_name_in_arabic",
+   "fetch_if_empty": 1,
+   "fieldname": "company_name_in_arabic",
+   "fieldtype": "Data",
+   "label": "Company Name In Arabic",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "company.tax_id",
+   "fieldname": "vat_id",
+   "fieldtype": "Data",
+   "label": "Vat ID"
+  },
+  {
+   "fieldname": "zatca_tab",
+   "fieldtype": "Tab Break",
+   "label": "ZATCA"
+  },
+  {
+   "fieldname": "egsunit",
+   "fieldtype": "Link",
+   "label": "EGSUnit",
+   "options": "EGSUnit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_counter",
+   "fieldtype": "Int",
+   "label": "Invoice Counter"
+  },
+  {
+   "fieldname": "ksa_einv_qr",
+   "fieldtype": "Attach Image",
+   "label": "Invoice QR Code Image"
+  },
+  {
+   "fieldname": "column_break_khnn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uuid",
+   "fieldtype": "Data",
+   "label": "UUID"
+  },
+  {
+   "fieldname": "invoice_hash",
+   "fieldtype": "Text",
+   "label": "Invoice Hash"
+  },
+  {
+   "fieldname": "section_break_kpyu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "xml_invoice",
+   "fieldtype": "Long Text",
+   "label": "XML Invoice"
+  },
+  {
+   "fieldname": "column_break_iovp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_qrcode",
+   "fieldtype": "Long Text",
+   "label": "Invoice QRCODE"
+  },
+  {
+   "fieldname": "section_break_gehy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Long Text",
+   "label": "Error Message"
+  },
+  {
+   "fieldname": "column_break_bfmg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warning_message",
+   "fieldtype": "Long Text",
+   "label": "Warning Message"
+  },
+  {
+   "default": "Cash",
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nBank Card\nCredit Card\nDebit Card\nBank Transfer"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_debit_note",
+   "fieldtype": "Check",
+   "label": "Is Debit Note"
   }
  ],
  "icon": "fa fa-file-text",
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-30 15:05:32.396477",
+ "modified": "2025-12-10 17:07:27.225456",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "POS Invoice",

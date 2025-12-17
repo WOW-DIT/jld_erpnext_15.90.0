@@ -13,14 +13,12 @@ class QualityReview(Document):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
+		from erpnext.quality_management.doctype.quality_review_objective.quality_review_objective import QualityReviewObjective
 		from frappe.types import DF
-
-		from erpnext.quality_management.doctype.quality_review_objective.quality_review_objective import (
-			QualityReviewObjective,
-		)
 
 		additional_information: DF.Text | None
 		date: DF.Date | None
+		employee: DF.Link | None
 		goal: DF.Link
 		procedure: DF.Link | None
 		reviews: DF.Table[QualityReviewObjective]

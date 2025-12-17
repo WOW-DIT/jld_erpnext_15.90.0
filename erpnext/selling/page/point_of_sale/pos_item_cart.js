@@ -111,12 +111,12 @@ erpnext.PointOfSale.ItemCart = class {
 
 		this.$totals_section.prepend(`
 			<div class="deposit-container">
-				<div class="deposit-label">Deposit Available</div>
+				<div class="deposit-label">${__("Deposit Available")}</div>
 				<div class="deposit-value" id="deposit_value">0.00</div>
 
 				<div class="deposit-use-wrapper">
 					<input type="checkbox" id="use_deposit_checkbox" />
-					<label for="use_deposit_checkbox">Use Deposit?</label>
+					<label for="use_deposit_checkbox">${__("Use Deposit?")}</label>
 				</div>
 			</div>
 		`);
@@ -551,11 +551,9 @@ erpnext.PointOfSale.ItemCart = class {
 	}
 
 	render_deposit() { // NEW
+		const currency = this.events.get_frm().doc.currency;
 		const deposit = this.customer_info?.deposit_balance || 0;
-		$("#deposit_value").text(frappe.format(deposit, {
-			fieldtype: "Currency",
-			currency: this.events.get_frm().doc.currency
-		}));
+		$("#deposit_value").html(`<span>${format_currency(deposit, currency)}</span>`);
 
 		// Reset previous selection
 		$("#use_deposit_checkbox").prop("checked", false);
@@ -657,6 +655,7 @@ erpnext.PointOfSale.ItemCart = class {
 	}
 
 	render_cart_item(item_data, $item_to_update) {
+		let userLang = frappe.boot.lang || frappe.boot.user.language;
 		const currency = this.events.get_frm().doc.currency;
 		const me = this;
 
@@ -672,7 +671,7 @@ erpnext.PointOfSale.ItemCart = class {
 			`${get_item_image_html()}
 			<div class="item-name-desc">
 				<div class="item-name">
-					${item_data.item_name}
+					${userLang === "ar" ? item_data.item_name_in_arabic : item_data.item_name}
 				</div>
 				${get_description_html()}
 			</div>
@@ -730,7 +729,7 @@ erpnext.PointOfSale.ItemCart = class {
 							.replace(/ +/g, " ");
 					}
 				}
-				item_data.description = frappe.ellipsis(item_data.description, 45);
+				item_data.description = frappe.ellipsis(item_data.description, 200);
 				return `<div class="item-desc">${item_data.description}</div>`;
 			}
 			return ``;

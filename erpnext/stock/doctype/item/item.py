@@ -90,6 +90,7 @@ class Item(Document):
 		default_material_request_type: DF.Literal["Purchase", "Material Transfer", "Material Issue", "Manufacture", "Customer Provided"]
 		delivered_by_supplier: DF.Check
 		description: DF.TextEditor | None
+		description_in_arabic: DF.TextEditor | None
 		disabled: DF.Check
 		enable_deferred_expense: DF.Check
 		enable_deferred_revenue: DF.Check
@@ -115,6 +116,7 @@ class Item(Document):
 		item_defaults: DF.Table[ItemDefault]
 		item_group: DF.Link
 		item_name: DF.Data | None
+		item_name_in_arabic: DF.Data
 		last_purchase_rate: DF.Float
 		lead_time_days: DF.Int
 		max_discount: DF.Float

@@ -32,6 +32,7 @@ class Appointment(Document):
 		department: DF.Link
 		employee: DF.Link
 		party: DF.DynamicLink | None
+		reminder_sent: DF.Check
 		scheduled_end_time: DF.Datetime | None
 		scheduled_time: DF.Datetime
 		selected_date: DF.Date
@@ -213,7 +214,7 @@ class Appointment(Document):
 		)
 
 		if self.scheduled_end_time:
-			appointment_event.ends_on = self.scheduled_end_time,
+			appointment_event.ends_on = self.scheduled_end_time
 		
 		# appointment_event.reference_doctype = self.doctype
 		# appointment_event.reference_docname = self.name

@@ -71,6 +71,7 @@ class POSInvoice(SalesInvoice):
 		company_address: DF.Link | None
 		company_address_display: DF.SmallText | None
 		company_contact_person: DF.Link | None
+		company_name_in_arabic: DF.Data | None
 		consolidated_invoice: DF.Link | None
 		contact_display: DF.SmallText | None
 		contact_email: DF.Data | None
@@ -88,17 +89,24 @@ class POSInvoice(SalesInvoice):
 		deposit_used: DF.Currency
 		discount_amount: DF.Currency
 		due_date: DF.Date | None
+		egsunit: DF.Link | None
+		error_message: DF.LongText | None
 		from_date: DF.Date | None
 		grand_total: DF.Currency
 		group_same_items: DF.Check
 		ignore_pricing_rule: DF.Check
 		in_words: DF.Data | None
 		inter_company_invoice_reference: DF.Link | None
+		invoice_counter: DF.Int
+		invoice_hash: DF.Text | None
+		invoice_qrcode: DF.LongText | None
+		is_debit_note: DF.Check
 		is_discounted: DF.Check
 		is_opening: DF.Literal["No", "Yes"]
 		is_pos: DF.Check
 		is_return: DF.Check
 		items: DF.Table[POSInvoiceItem]
+		ksa_einv_qr: DF.AttachImage | None
 		language: DF.Data | None
 		letter_head: DF.Link | None
 		loyalty_amount: DF.Currency
@@ -113,6 +121,7 @@ class POSInvoice(SalesInvoice):
 		packed_items: DF.Table[PackedItem]
 		paid_amount: DF.Currency
 		party_account_currency: DF.Link | None
+		payment_method: DF.Literal["Cash", "Bank Card", "Credit Card", "Debit Card", "Bank Transfer"]
 		payment_schedule: DF.Table[PaymentSchedule]
 		payment_terms_template: DF.Link | None
 		payments: DF.Table[SalesInvoicePayment]
@@ -163,10 +172,14 @@ class POSInvoice(SalesInvoice):
 		update_billed_amount_in_sales_order: DF.Check
 		update_stock: DF.Check
 		use_deposit: DF.Check
+		uuid: DF.Data | None
+		vat_id: DF.Data | None
+		warning_message: DF.LongText | None
 		write_off_account: DF.Link | None
 		write_off_amount: DF.Currency
 		write_off_cost_center: DF.Link | None
 		write_off_outstanding_amount_automatically: DF.Check
+		xml_invoice: DF.LongText | None
 	# end: auto-generated types
 
 	def __init__(self, *args, **kwargs):

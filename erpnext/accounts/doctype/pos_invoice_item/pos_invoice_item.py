@@ -37,6 +37,7 @@ class POSInvoiceItem(Document):
 		delivered_qty: DF.Float
 		delivery_note: DF.Link | None
 		description: DF.TextEditor
+		description_in_arabic: DF.TextEditor | None
 		discount_amount: DF.Currency
 		discount_percentage: DF.Percent
 		distributed_discount_amount: DF.Currency
@@ -50,9 +51,11 @@ class POSInvoiceItem(Document):
 		income_account: DF.Link
 		is_fixed_asset: DF.Check
 		is_free_item: DF.Check
+		is_offer: DF.Check
 		item_code: DF.Link | None
 		item_group: DF.Link | None
 		item_name: DF.Data
+		item_name_in_arabic: DF.Data | None
 		item_tax_rate: DF.SmallText | None
 		item_tax_template: DF.Link | None
 		margin_rate_or_amount: DF.Float

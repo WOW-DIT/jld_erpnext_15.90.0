@@ -8,6 +8,7 @@
  "field_order": [
   "goal",
   "date",
+  "employee",
   "cb_00",
   "procedure",
   "status",
@@ -74,6 +75,12 @@
    "label": "Goal",
    "options": "Quality Goal",
    "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -84,10 +91,11 @@
    "link_fieldname": "review"
   }
  ],
- "modified": "2023-08-28 22:33:22.472980",
+ "modified": "2025-12-04 11:18:34.821615",
  "modified_by": "Administrator",
  "module": "Quality Management",
  "name": "Quality Review",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -127,6 +135,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

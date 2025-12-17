@@ -13,6 +13,7 @@
   "basic_info",
   "naming_series",
   "salutation",
+  "mrn",
   "customer_name",
   "customer_type",
   "customer_group",
@@ -138,7 +139,7 @@
    "label": "Customer Type",
    "oldfieldname": "customer_type",
    "oldfieldtype": "Select",
-   "options": "Company\nIndividual\nPartnership",
+   "options": "Company\nIndividual",
    "reqd": 1
   },
   {
@@ -606,6 +607,12 @@
    "fieldtype": "Currency",
    "label": "Deposit Balance",
    "read_only": 1
+  },
+  {
+   "fieldname": "mrn",
+   "fieldtype": "Data",
+   "label": "MRN",
+   "unique": 1
   }
  ],
  "icon": "fa fa-user",
@@ -629,7 +636,7 @@
    "link_fieldname": "customer"
   }
  ],
- "modified": "2025-12-01 16:27:47.303623",
+ "modified": "2025-12-11 14:30:28.369552",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",

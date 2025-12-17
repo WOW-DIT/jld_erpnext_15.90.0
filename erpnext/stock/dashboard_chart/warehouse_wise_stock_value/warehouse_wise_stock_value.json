@@ -9,8 +9,8 @@
  "idx": 0,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2025-04-25 11:38:43.644402",
- "modified": "2025-04-25 11:39:12.585542",
+ "last_synced_on": "2025-12-07 16:33:22.140352",
+ "modified": "2025-12-07 16:35:45.502145",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Warehouse wise Stock Value",
@@ -31,8 +31,12 @@
   },
   {
    "role": "Accounts User"
+  },
+  {
+   "role": "Storage Manager"
   }
  ],
+ "show_values_over_chart": 0,
  "source": "Warehouse wise Stock Value",
  "timeseries": 0,
  "type": "Bar",

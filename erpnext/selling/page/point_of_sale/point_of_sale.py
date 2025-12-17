@@ -39,6 +39,7 @@ def search_by_term(search_term, warehouse, price_list):
 		"item_group": item_doc.item_group,
 		"item_image": item_doc.image,
 		"item_name": item_doc.item_name,
+		"item_name_in_arabic": item_doc.item_name_in_arabic,
 		"serial_no": serial_no,
 		"stock_uom": item_doc.stock_uom,
 		"uom": item_doc.stock_uom,
@@ -160,6 +161,7 @@ def get_items(start, page_length, price_list, item_group, pos_profile, search_te
 		SELECT
 			item.name AS item_code,
 			item.item_name,
+			item.item_name_in_arabic,
 			item.description,
 			item.stock_uom,
 			item.image AS item_image,
@@ -256,7 +258,9 @@ def search_for_serial_or_batch_or_barcode_number(search_value: str) -> dict[str,
 def get_conditions(search_term):
 	condition = "("
 	condition += """item.name like {search_term}
-		or item.item_name like {search_term}""".format(search_term=frappe.db.escape("%" + search_term + "%"))
+		or item.item_name like {search_term}
+		or item.item_name_in_arabic like {search_term}
+		""".format(search_term=frappe.db.escape("%" + search_term + "%"))
 	condition += add_search_fields_condition(search_term)
 	condition += ")"
 

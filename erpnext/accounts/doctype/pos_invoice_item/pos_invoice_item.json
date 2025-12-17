@@ -12,9 +12,11 @@
   "item_code",
   "col_break1",
   "item_name",
+  "item_name_in_arabic",
   "customer_item_code",
   "description_section",
   "description",
+  "description_in_arabic",
   "item_group",
   "brand",
   "image_section",
@@ -34,6 +36,7 @@
   "margin_type",
   "margin_rate_or_amount",
   "rate_with_margin",
+  "is_offer",
   "column_break_19",
   "discount_percentage",
   "discount_amount",
@@ -854,17 +857,37 @@
    "fieldtype": "Currency",
    "label": "Distributed Discount Amount",
    "options": "currency"
+  },
+  {
+   "fetch_from": "item_code.item_name_in_arabic",
+   "fieldname": "item_name_in_arabic",
+   "fieldtype": "Data",
+   "label": "Item Name in Arabic"
+  },
+  {
+   "default": "0",
+   "fetch_from": "item_code.is_offer",
+   "fieldname": "is_offer",
+   "fieldtype": "Check",
+   "label": "Is Offer"
+  },
+  {
+   "fetch_from": "item_code.description_in_arabic",
+   "fieldname": "description_in_arabic",
+   "fieldtype": "Text Editor",
+   "label": "Description In Arabic"
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2024-05-07 15:56:54.343317",
+ "modified": "2025-12-16 15:37:45.635408",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "POS Invoice Item",
  "naming_rule": "Random",
  "owner": "Administrator",
  "permissions": [],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

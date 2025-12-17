@@ -47,7 +47,7 @@ class Customer(TransactionBase):
 		customer_pos_id: DF.Data | None
 		customer_primary_address: DF.Link | None
 		customer_primary_contact: DF.Link | None
-		customer_type: DF.Literal["Company", "Individual", "Partnership"]
+		customer_type: DF.Literal["Company", "Individual"]
 		default_bank_account: DF.Link | None
 		default_commission_rate: DF.Float
 		default_currency: DF.Link | None
@@ -70,6 +70,7 @@ class Customer(TransactionBase):
 		loyalty_program_tier: DF.Data | None
 		market_segment: DF.Link | None
 		mobile_no: DF.ReadOnly | None
+		mrn: DF.Data | None
 		naming_series: DF.Literal["CUST-.YYYY.-"]
 		opportunity_name: DF.Link | None
 		payment_terms: DF.Link | None

@@ -639,7 +639,7 @@ erpnext.PointOfSale.Controller = class {
 			} else {
 				if (!this.frm.doc.customer) return this.raise_customer_selection_alert();
 
-				const { item_code, batch_no, serial_no, rate, uom, stock_uom } = item;
+				const { item_code, item_name_in_arabic, batch_no, serial_no, rate, uom, stock_uom } = item;
 
 				if (!item_code) return;
 
@@ -651,7 +651,7 @@ erpnext.PointOfSale.Controller = class {
 					frappe.utils.play_sound("error");
 					return;
 				}
-				const new_item = { item_code, batch_no, rate, uom, [field]: value, stock_uom };
+				const new_item = { item_code, item_name_in_arabic, batch_no, rate, uom, [field]: value, stock_uom };
 
 				if (serial_no) {
 					await this.check_serial_no_availablilty(item_code, this.frm.doc.set_warehouse, serial_no);

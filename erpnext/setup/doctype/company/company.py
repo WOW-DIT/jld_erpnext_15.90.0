@@ -39,6 +39,7 @@ class Company(NestedSet):
 		company_description: DF.TextEditor | None
 		company_logo: DF.AttachImage | None
 		company_name: DF.Data
+		company_name_in_arabic: DF.Data
 		cost_center: DF.Link | None
 		country: DF.Link
 		create_chart_of_accounts_based_on: DF.Literal["", "Standard Template", "Existing Company"]
@@ -79,6 +80,8 @@ class Company(NestedSet):
 		exception_budget_approver_role: DF.Link | None
 		exchange_gain_loss_account: DF.Link | None
 		existing_company: DF.Link | None
+		expenses_included_in_asset_valuation: DF.Link | None
+		expenses_included_in_valuation: DF.Link | None
 		fax: DF.Data | None
 		is_group: DF.Check
 		lft: DF.Int
@@ -88,9 +91,7 @@ class Company(NestedSet):
 		payment_terms: DF.Link | None
 		phone_no: DF.Data | None
 		reconcile_on_advance_payment_date: DF.Check
-		reconciliation_takes_effect_on: DF.Literal[
-			"Advance Payment Date", "Oldest Of Invoice Or Advance", "Reconciliation Date"
-		]
+		reconciliation_takes_effect_on: DF.Literal["Advance Payment Date", "Oldest Of Invoice Or Advance", "Reconciliation Date"]
 		registration_details: DF.Code | None
 		rgt: DF.Int
 		round_off_account: DF.Link | None
@@ -108,6 +109,7 @@ class Company(NestedSet):
 		unrealized_profit_loss_account: DF.Link | None
 		website: DF.Data | None
 		write_off_account: DF.Link | None
+		zatca_v2: DF.Check
 	# end: auto-generated types
 
 	nsm_parent_field = "parent_company"
