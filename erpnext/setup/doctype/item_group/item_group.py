@@ -18,7 +18,9 @@ class ItemGroup(NestedSet):
 		from erpnext.stock.doctype.item_default.item_default import ItemDefault
 		from erpnext.stock.doctype.item_tax.item_tax import ItemTax
 		from frappe.types import DF
+		from hrms.hr.doctype.department_employee.department_employee import DepartmentEmployee
 
+		employees: DF.Table[DepartmentEmployee]
 		image: DF.AttachImage | None
 		is_group: DF.Check
 		item_group_defaults: DF.Table[ItemDefault]

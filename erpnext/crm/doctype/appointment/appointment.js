@@ -40,19 +40,19 @@ frappe.ui.form.on("Appointment", {
 	},
 	department: function (frm) {
 		frm.fields_dict["times"].wrapper.innerHTML = "";
-		if(frm.doc.department) {
-			frm.set_value("service", "");
-			frm.set_query("service", function () {
-				return {
-					filters: {
-						item_group: frm.doc.department
-					},
-				};
-			});
-		}
 	},
 	employee: function (frm) {
 		frm.fields_dict["times"].wrapper.innerHTML = "";
+	},
+	customer: async function (frm) {
+		if(frm.doc.customer) {
+			const customer = await frappe.db.get_doc("Customer", frm.doc.customer);
+			frm.set_value("customer_name", customer.customer_name);
+			frm.set_value("customer_phone_number", customer.mobile_no);
+			frm.set_value("customer_email", customer.email_id);
+			frm.set_value("appointment_with", "Customer");
+			frm.set_value("party", customer.name);
+		}
 	}
 });
 

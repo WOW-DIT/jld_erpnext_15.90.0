@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Promotions",
  "links": [],
- "modified": "2025-12-07 14:28:15.044020",
+ "modified": "2025-12-24 11:55:05.971496",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "Promotions",
@@ -23,7 +23,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 30.0,
+ "sequence_id": 32.0,
  "shortcuts": [
   {
    "color": "Grey",

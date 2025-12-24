@@ -5,19 +5,20 @@
 from frappe.model.document import Document
 
 
-class ServiceRating(Document):
+class CustomerCart(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
+		from erpnext.crm.doctype.customer_cart_item.customer_cart_item import CustomerCartItem
 		from frappe.types import DF
 
-		appointment: DF.Link | None
-		customer: DF.Link | None
-		rating: DF.Rating
-		rating_time: DF.Datetime | None
-		service: DF.Link | None
+		amended_from: DF.Link | None
+		customer: DF.Link
+		invoice: DF.Link | None
+		mobile_number: DF.Data | None
+		services: DF.Table[CustomerCartItem]
 	# end: auto-generated types
 	pass

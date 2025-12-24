@@ -43,6 +43,7 @@
   "scheduled_confirmation_date",
   "column_break_32",
   "final_confirmation_date",
+  "contract_start_date",
   "contract_end_date",
   "col_break_22",
   "notice_number_of_days",
@@ -93,6 +94,10 @@
   "column_break_73",
   "date_of_issue",
   "place_of_issue",
+  "national_id__iqama_section",
+  "id_number",
+  "column_break_ocvc",
+  "id_expiry_date",
   "profile_tab",
   "bio",
   "educational_qualification",
@@ -316,7 +321,7 @@
   {
    "fieldname": "final_confirmation_date",
    "fieldtype": "Date",
-   "label": "Confirmation Date",
+   "label": "Joining Date",
    "oldfieldname": "final_confirmation_date",
    "oldfieldtype": "Date"
   },
@@ -816,6 +821,30 @@
    "fieldtype": "Data",
    "label": "IBAN",
    "options": "IBAN"
+  },
+  {
+   "fieldname": "national_id__iqama_section",
+   "fieldtype": "Section Break",
+   "label": "National ID / Iqama"
+  },
+  {
+   "fieldname": "id_number",
+   "fieldtype": "Data",
+   "label": "ID Number"
+  },
+  {
+   "fieldname": "column_break_ocvc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
   }
  ],
  "icon": "fa fa-user",
@@ -823,7 +852,7 @@
  "image_field": "image",
  "is_tree": 1,
  "links": [],
- "modified": "2025-08-29 11:52:12.819878",
+ "modified": "2025-12-24 12:05:13.736469",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Employee",

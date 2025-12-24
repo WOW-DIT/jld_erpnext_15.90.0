@@ -24,6 +24,7 @@ class Appointment(Document):
 
 		appointment_with: DF.Link | None
 		calendar_event: DF.Link | None
+		customer: DF.Link
 		customer_details: DF.LongText | None
 		customer_email: DF.Data | None
 		customer_name: DF.Data
@@ -36,7 +37,6 @@ class Appointment(Document):
 		scheduled_end_time: DF.Datetime | None
 		scheduled_time: DF.Datetime
 		selected_date: DF.Date
-		service: DF.Link
 		status: DF.Literal["Open", "Unverified", "Closed"]
 	# end: auto-generated types
 

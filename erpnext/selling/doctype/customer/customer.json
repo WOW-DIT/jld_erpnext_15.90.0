@@ -634,9 +634,19 @@
    "group": "Support",
    "link_doctype": "WhatsApp Message",
    "link_fieldname": "customer"
+  },
+  {
+   "group": "Pre Sales",
+   "link_doctype": "Appointment",
+   "link_fieldname": "party"
+  },
+  {
+   "group": "Pre Sales",
+   "link_doctype": "Customer Cart",
+   "link_fieldname": "customer"
   }
  ],
- "modified": "2025-12-11 14:30:28.369552",
+ "modified": "2025-12-18 11:50:23.857719",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",

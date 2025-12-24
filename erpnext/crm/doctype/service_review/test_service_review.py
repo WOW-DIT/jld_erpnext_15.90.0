@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestServiceRating(FrappeTestCase):
+class TestServiceReview(FrappeTestCase):
 	pass

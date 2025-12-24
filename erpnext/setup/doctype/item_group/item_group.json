@@ -21,7 +21,9 @@
   "taxes",
   "lft",
   "old_parent",
-  "rgt"
+  "rgt",
+  "employees_tab",
+  "employees"
  ],
  "fields": [
   {
@@ -127,6 +129,17 @@
    "options": "Item Group",
    "print_hide": 1,
    "report_hide": 1
+  },
+  {
+   "fieldname": "employees_tab",
+   "fieldtype": "Tab Break",
+   "label": "Employees"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Table",
+   "label": "Employees",
+   "options": "Department Employee"
   }
  ],
  "icon": "fa fa-sitemap",
@@ -135,7 +148,7 @@
  "is_tree": 1,
  "links": [],
  "max_attachments": 3,
- "modified": "2025-12-11 14:53:28.617709",
+ "modified": "2025-12-18 13:00:53.429693",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Item Group",
