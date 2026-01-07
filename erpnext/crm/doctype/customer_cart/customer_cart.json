@@ -7,6 +7,7 @@
  "field_order": [
   "section_break_k7it",
   "amended_from",
+  "company",
   "customer",
   "mobile_number",
   "services",
@@ -55,14 +56,22 @@
    "fieldname": "invoice",
    "fieldtype": "Link",
    "label": "Invoice",
-   "options": "POS Invoice"
+   "options": "POS Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-12-23 13:02:48.019329",
+ "modified": "2026-01-05 12:15:06.998335",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "Customer Cart",

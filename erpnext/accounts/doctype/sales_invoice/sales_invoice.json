@@ -10,6 +10,7 @@
   "title",
   "naming_series",
   "customer",
+  "mrn",
   "customer_name",
   "tax_id",
   "company",
@@ -2284,6 +2285,11 @@
    "label": "Payment Method",
    "options": "\nCash\nBank Card\nCredit Card\nDebit Card\nBank Transfer",
    "reqd": 1
+  },
+  {
+   "fieldname": "mrn",
+   "fieldtype": "Data",
+   "label": "MRN"
   }
  ],
  "grid_page_length": 50,
@@ -2297,7 +2303,7 @@
    "link_fieldname": "consolidated_invoice"
   }
  ],
- "modified": "2025-12-09 10:29:52.879245",
+ "modified": "2026-01-06 14:17:52.718751",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",

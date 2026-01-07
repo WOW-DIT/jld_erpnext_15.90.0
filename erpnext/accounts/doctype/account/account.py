@@ -33,41 +33,9 @@ class Account(NestedSet):
 
 		account_currency: DF.Link | None
 		account_name: DF.Data
+		account_name_in_arabic: DF.Data | None
 		account_number: DF.Data | None
-		account_type: DF.Literal[
-			"",
-			"Accumulated Depreciation",
-			"Asset Received But Not Billed",
-			"Bank",
-			"Cash",
-			"Chargeable",
-			"Capital Work in Progress",
-			"Cost of Goods Sold",
-			"Current Asset",
-			"Current Liability",
-			"Depreciation",
-			"Direct Expense",
-			"Direct Income",
-			"Equity",
-			"Expense Account",
-			"Expenses Included In Asset Valuation",
-			"Expenses Included In Valuation",
-			"Fixed Asset",
-			"Income Account",
-			"Indirect Expense",
-			"Indirect Income",
-			"Liability",
-			"Payable",
-			"Receivable",
-			"Round Off",
-			"Round Off for Opening",
-			"Stock",
-			"Stock Adjustment",
-			"Stock Received But Not Billed",
-			"Service Received But Not Billed",
-			"Tax",
-			"Temporary",
-		]
+		account_type: DF.Literal["", "Accumulated Depreciation", "Asset Received But Not Billed", "Bank", "Cash", "Chargeable", "Capital Work in Progress", "Cost of Goods Sold", "Current Asset", "Current Liability", "Depreciation", "Direct Expense", "Direct Income", "Equity", "Expense Account", "Expenses Included In Asset Valuation", "Expenses Included In Valuation", "Fixed Asset", "Income Account", "Indirect Expense", "Indirect Income", "Liability", "Payable", "Receivable", "Round Off", "Round Off for Opening", "Stock", "Stock Adjustment", "Stock Received But Not Billed", "Service Received But Not Billed", "Tax", "Temporary"]
 		balance_must_be: DF.Literal["", "Debit", "Credit"]
 		company: DF.Link
 		disabled: DF.Check
@@ -76,7 +44,7 @@ class Account(NestedSet):
 		is_group: DF.Check
 		lft: DF.Int
 		old_parent: DF.Data | None
-		parent_account: DF.Link
+		parent_account: DF.Link | None
 		report_type: DF.Literal["", "Balance Sheet", "Profit and Loss"]
 		rgt: DF.Int
 		root_type: DF.Literal["", "Asset", "Liability", "Income", "Expense", "Equity"]
@@ -210,8 +178,8 @@ class Account(NestedSet):
 	def validate_root_details(self):
 		doc_before_save = self.get_doc_before_save()
 
-		if doc_before_save and not doc_before_save.parent_account:
-			throw(_("Root cannot be edited."), RootNotEditable)
+		# if doc_before_save and not doc_before_save.parent_account:
+		# 	throw(_("Root cannot be edited."), RootNotEditable)
 
 		if not self.parent_account and not cint(self.is_group):
 			throw(_("The root account {0} must be a group").format(frappe.bold(self.name)))

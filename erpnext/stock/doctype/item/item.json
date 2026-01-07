@@ -904,8 +904,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Item Name in Arabic",
-   "reqd": 1
+   "label": "Item Name in Arabic"
   },
   {
    "fieldname": "description_in_arabic",
@@ -922,7 +921,7 @@
  "image_field": "image",
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-12-16 14:05:52.155989",
+ "modified": "2025-12-25 15:22:13.448929",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Item",

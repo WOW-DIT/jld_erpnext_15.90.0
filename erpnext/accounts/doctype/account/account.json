@@ -12,6 +12,7 @@
   "column_break0",
   "disabled",
   "account_name",
+  "account_name_in_arabic",
   "account_number",
   "is_group",
   "company",
@@ -110,7 +111,6 @@
    "oldfieldname": "parent_account",
    "oldfieldtype": "Link",
    "options": "Account",
-   "reqd": 1,
    "search_index": 1
   },
   {
@@ -185,13 +185,18 @@
    "fieldname": "disabled",
    "fieldtype": "Check",
    "label": "Disable"
+  },
+  {
+   "fieldname": "account_name_in_arabic",
+   "fieldtype": "Data",
+   "label": "Account Name in Arabic"
   }
  ],
  "icon": "fa fa-money",
  "idx": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-19 15:19:11.095045",
+ "modified": "2025-12-24 15:33:02.898054",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Account",
@@ -246,6 +251,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "search_fields": "account_number",
  "show_name_in_global_search": 1,
  "sort_field": "modified",

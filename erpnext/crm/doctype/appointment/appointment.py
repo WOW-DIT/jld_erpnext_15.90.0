@@ -37,7 +37,7 @@ class Appointment(Document):
 		scheduled_end_time: DF.Datetime | None
 		scheduled_time: DF.Datetime
 		selected_date: DF.Date
-		status: DF.Literal["Open", "Unverified", "Closed"]
+		status: DF.Literal["Open", "Unverified", "Closed", "Cancelled"]
 	# end: auto-generated types
 
 	def find_lead_by_email(self):
@@ -113,6 +113,7 @@ class Appointment(Document):
 			return
 		cal_event = frappe.get_doc("Event", self.calendar_event)
 		cal_event.starts_on = self.scheduled_time
+		cal_event.ends_on = self.scheduled_end_time
 		cal_event.save(ignore_permissions=True)
 
 	def set_verified(self, email):

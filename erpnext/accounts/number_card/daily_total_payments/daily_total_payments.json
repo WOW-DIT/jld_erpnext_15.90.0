@@ -1,5 +1,6 @@
 {
  "aggregate_function_based_on": "base_grand_total",
+ "color": "#29CD42",
  "creation": "2025-12-24 11:49:23.961368",
  "currency": "SAR",
  "docstatus": 0,
@@ -12,7 +13,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Daily Total Payments",
- "modified": "2025-12-24 14:06:21.383503",
+ "modified": "2025-12-29 15:59:53.912120",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Daily Total Payments",

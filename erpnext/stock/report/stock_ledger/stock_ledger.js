@@ -52,7 +52,7 @@ frappe.query_reports["Stock Ledger"] = {
 						searchfield: "name",
 						start: 0,
 						page_len: 10,
-						filters: {},
+						filters: {"is_stock_item": 1},
 						as_dict: 1,
 					},
 				});

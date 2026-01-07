@@ -14,6 +14,7 @@
   "basic_information",
   "employee",
   "naming_series",
+  "file_number",
   "first_name",
   "middle_name",
   "last_name",
@@ -96,6 +97,7 @@
   "place_of_issue",
   "national_id__iqama_section",
   "id_number",
+  "nationality",
   "column_break_ocvc",
   "id_expiry_date",
   "profile_tab",
@@ -241,16 +243,14 @@
    "fieldtype": "Date",
    "label": "Date of Birth",
    "oldfieldname": "date_of_birth",
-   "oldfieldtype": "Date",
-   "reqd": 1
+   "oldfieldtype": "Date"
   },
   {
    "fieldname": "date_of_joining",
    "fieldtype": "Date",
    "label": "Date of Joining",
    "oldfieldname": "date_of_joining",
-   "oldfieldtype": "Date",
-   "reqd": 1
+   "oldfieldtype": "Date"
   },
   {
    "allow_in_quick_entry": 1,
@@ -321,7 +321,7 @@
   {
    "fieldname": "final_confirmation_date",
    "fieldtype": "Date",
-   "label": "Joining Date",
+   "label": "Confirmation Date",
    "oldfieldname": "final_confirmation_date",
    "oldfieldtype": "Date"
   },
@@ -845,6 +845,20 @@
    "fieldname": "contract_start_date",
    "fieldtype": "Date",
    "label": "Contract Start Date"
+  },
+  {
+   "fieldname": "file_number",
+   "fieldtype": "Int",
+   "label": "File Number",
+   "non_negative": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Country"
   }
  ],
  "icon": "fa fa-user",
@@ -852,7 +866,7 @@
  "image_field": "image",
  "is_tree": 1,
  "links": [],
- "modified": "2025-12-24 12:05:13.736469",
+ "modified": "2026-01-04 11:34:38.899108",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Employee",

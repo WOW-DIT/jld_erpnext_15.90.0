@@ -144,6 +144,7 @@ class SalesInvoice(SellingController):
 		loyalty_program: DF.Link | None
 		loyalty_redemption_account: DF.Link | None
 		loyalty_redemption_cost_center: DF.Link | None
+		mrn: DF.Data | None
 		named_place: DF.Data | None
 		naming_series: DF.Literal["ACC-SINV-.YYYY.-", "ACC-SINV-RET-.YYYY.-"]
 		net_total: DF.Currency
